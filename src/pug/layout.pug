@@ -1,0 +1,23 @@
+include ./mixin
+
+html
+	head
+		meta(charset="utf-8")
+		title Redcrow
+		<!-- STYLES -->
+		link(rel="stylesheet" href="/js/libs/Swiper/swiper-bundle.min.css")
+		link(rel="stylesheet" href="/css/style.min.css")
+		link(rel="stylesheet" href="/css/media.min.css")
+		<!-- FONTS -->
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Source+Sans+Pro:wght@400;600&display=swap")
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap")
+
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	body
+		block content
+
+		<!-- SCRIPTS -->
+		script(src="/js/libs/Swiper/swiper-bundle.min.js")
+		script(src="/js/script.min.js")

@@ -1,0 +1,49 @@
+mixin icon(id, className,text)
+	svg(xmlns:xlink="http://www.w3.org/1999/xlink" class=className)
+		use(xlink:href="#icon-" + id href="#icon-" + id)
+
+mixin icons(id, className,text)
+	.together
+		svg(xmlns:xlink="http://www.w3.org/1999/xlink" class=className)
+			use(xlink:href="#icon-" + id href="#icon-" + id)
+		.icon-card-icon-text!=text
+
+mixin dropdown(value, isBig=false)
+	.dropdown
+		.dropdown__wrapper
+			.dropdown__value!=value
+		.dropdown__list(class=(isBig ? "dropdown__list--big" : ""))
+			block
+
+mixin icon-card(imgSrc,cardText)
+	.icon-card
+		img.icon-card-img(src=imgSrc)
+		.icon-card-line
+			.icon-card-text!=cardText
+		.icon-card-icon
+			+icons('Bed', 'icon-card__icon','4')
+			+icons('Shower', 'icon-card__icon','2')
+			+icons('Size', 'icon-card__icon','2')
+
+mixin image-block(imgSrc, title, isBig=false)
+	.image-block(class=(isBig ? "image-block--big" : ""))
+		img.image-block__img(src=imgSrc)
+		.image-block__text!=title
+
+mixin review-block(imgSrc, name)
+	.review-block
+		.review-block__text
+			block
+		.review-block__profile
+			img.review-block__img(src=imgSrc)
+			.review-block__info
+				.review-block__name!=name
+				.review-block__who Client
+
+mixin content-list(title,text1,text2,text3,text4)
+	.content-list
+		.content-list__title!=title
+		a.content-list__text(href="#")!=text1
+		a.content-list__text(href="#")!=text2
+		a.content-list__text(href="#")!=text3
+		a.content-list__text(href="#")!=text4

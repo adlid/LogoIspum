@@ -1,0 +1,139 @@
+extends pug/layout
+
+block content
+	<!-- START HEADER -->
+	<!-- END HEADER -->
+
+	<!-- START SECTION FIRST SCREEN -->
+	.section.s-first-screen
+		.container
+			.s-first-screen__nav
+				.nav--left
+					a(href="#")
+						img.nav--left-logo(src="/images/logo.png")
+				.nav--right
+					.header__menu.menu
+						.menu__icon
+							span
+						.menu__body
+							ul.menu__list
+								li
+									a.menu__link(href="#" data-goto=".s-good-hand") Nav Link
+								li
+									a.menu__link(href="#" data-goto=".s-place") Nav Link
+								li
+									a.menu__link(href="#" data-goto=".s-good-hand-sp") Nav Link
+								li
+									a.menu__link(href="#" data-goto=".s-reviews") Nav Link
+
+					button.btn.btn-head.btn_primary.btn_primary--yellow.primary_text--bw Work with us
+			.s-first-screen__container
+				.usp
+					.usp__title Beautiful homes made for you
+					.primary_text.primary_text--opa In oculis quidem se esse admonere interesse enim maxime placeat, facere possimus, omnis. Et quidem faciunt, ut labore et accurate disserendum et harum quidem exercitus quid.
+			.s-first-screen__footer
+				.primary_text.primary_text--by See all listings
+
+
+	<!-- END SECTION FIRST SCREEN -->
+
+	<!-- START SECTION GOOD HAND -->
+	.section.s-good-hand
+		.container
+			.s-good-hand__wrapper-row
+				.s-good-hand__img-right
+				.s-good-hand__container
+					.title You’re in good hands
+					.primary_text Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem accusantium doloremque.
+					button.btn.btn_primary.btn_primary--pl.btn_primary--black.primary_text--wy Learn more
+
+	<!-- END SECTION GOOD HAND -->
+
+	<!-- START SECTION PLACE -->
+	.section.s-place
+		.container
+			.s-place__container
+				.title.title--lg Find your next place to live
+				.s-place__container-nav
+					+dropdown("Looking for")
+						p lorem lorem lorem lorem lorem lorem lorem
+					+dropdown("Location")
+						p lorem lorem lorem lorem lorem lorem lorem
+					+dropdown("Property Type")
+						p lorem lorem lorem lorem lorem lorem lorem
+					+dropdown("Price")
+						p 1 million
+						p 4 million
+						p 8 million
+						p 5 million
+				.s-place__container-slider
+						+icon-card("/images/Place/house-1.jpg",'Malto House')
+						+icon-card("/images/Place/house-2.jpg",'Malto House')
+						+icon-card("/images/Place/house-3.jpg",'Malto House')
+						+icon-card("/images/Place/house-4.jpg",'Malto House')
+						+icon-card("/images/Place/house-5.jpg",'Malto House')
+						+icon-card("/images/Place/house-6.jpg",'Malto House')
+	<!-- END SECTION PLACE -->
+
+	<!-- START SECTION GOOD HAND -->
+	.section.s-good-hand.s-good-hand-sp
+		.container
+			.s-good-hand__wrapper-row-end
+				.s-good-hand__container
+					.title You’re in good hands
+					.primary_text Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem accusantium doloremque.
+					button.btn.btn_primary.btn_primary--pl.btn_primary--black.primary_text--wy Learn more
+				.s-good-hand__img-left
+	<!-- END SECTION GOOD HAND -->
+
+	<!-- START SECTION GOOD HAND -->
+	.section.s-good-hand--text
+		.container
+			.s-good-hand__wrapper-column
+				.title You’re in good hands
+				.primary_text Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem accusantium doloremque.
+				button.btn.btn_primary.btn_primary--pl.btn_primary--yellow.primary_text--wy Learn more
+	<!-- END SECTION GOOD HAND -->
+
+	<!-- START SECTION REVIEWS -->
+	.section.s-reviews
+		.container
+			.reviews-slider.swiper-container
+				.swiper-wrapper
+					.swiper-slide
+						+review-block('/images/reviews/Oval.png','Lara Madrigal')
+							|“Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
+					.swiper-slide
+						+review-block('/images/reviews/Oval.svg','Lara Madrigal')
+							|“Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
+					.swiper-slide
+						+review-block('/images/reviews/Oval.svg','Lara Madrigal')
+							|“Certe, inquam, pertinax non existimant oportere exquisitis rationibus conquisitis de quo enim ipsam. Torquem detraxit hosti et quidem faciunt, ut aut.”
+	<!-- END SECTION REVIEWS -->
+
+	<!-- START SECTION FOOTER -->
+	.section.s-footer
+		.container
+			.s-footer-container
+				.s-footer-header
+					.title--footer Make your dreams a <span> reality</span>
+					button.btn.btn_primary.btn_primary--pl.btn_primary--yellow.primary_text--bw Work with us
+				.content
+					.content-icons
+						.footer__logo
+							a.social-link.link(href='#')
+								img.nav--left-logo(src="/images/logo.png")
+						.footer__socials
+							a.social-link.link(href='#')
+								+icon('facebook')
+							a.social-link.link(href='#')
+								+icon('twitter')
+							a.social-link.link(href='#')
+								+icon('instagram')
+					.content-link
+						+content-list('Column Heading','Link goes here','Link goes here','Link goes here','Link goes here')
+						+content-list('Column Heading','Link goes here','Link goes here','Link goes here','Link goes here')
+						+content-list('Column Heading','Link goes here','Link goes here','Link goes here','Link goes here')
+
+	<!-- END SECTION FOOTER -->
+

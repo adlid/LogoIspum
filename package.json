@@ -1,0 +1,30 @@
+{
+  "name": "sborka-gulpia",
+  "version": "1.0.0",
+  "description": "Front-end build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alan",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "jquery": "^3.6.0"
+  },
+  "dependencies": {
+    "g": "^2.0.1",
+    "node-sass": "^5.0.0"
+  }
+}
